@@ -14,4 +14,22 @@ public class Utility
 				System.out.println(label + " : " + stringJoiner.toString());
 				return output;
 			}
+			
+		public static int findPrecedence(char charachter)
+			{
+				switch (charachter)
+					{
+						case '+':
+						case '-':
+							return 1;
+						
+						case '*':
+						case '/':
+							return 2;
+						
+						case '^':
+							return 3;
+					}
+				return -1;
+			}
 	}
